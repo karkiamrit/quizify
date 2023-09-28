@@ -47,7 +47,15 @@ export const POST = async (req: Request, res: Response) => {
             }, {
                 status: 400
             });
+
+
         }
-    }
-    
-}
+        else{
+            return NextResponse.json({
+                err: err
+            }, {
+                status: 500
+            });
+        }
+      
+}};
